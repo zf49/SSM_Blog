@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zf.dao.UserMapper">
+
+
+    <resultMap id="UserMap" type="user">
+        <result column="avatar_id" property="avatarId"/>
+        <result column="detail_id" property="detailId"/>
+    </resultMap>
+
+    <select id="getAllUser" resultMap="UserMap">
+        select * from SSM_BLOG.user
+    </select>
+
+    <insert id="addUser" parameterType="user">
+
+        insert into SSM_BLOG.user(username, pwd,detail_id)values (#{username},#{pwd},#{detailId})
+    </insert>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from SSM_BLOG.user where id =${id}
+    </delete>
+
+    <update id="updateUser" parameterType="user">
+        update SSM_BLOG.user set avatar_id =#{avatarId}, detail_id =#{detailId} where username = #{username}
+    </update>
+
+     <select id="getUserById" parameterType="int" resultMap="UserMap">
+         select * from SSM_BLOG.user where id=#{id}
+     </select>
+
+    <select id="getUserIdByname" parameterType="String">
+        select id from SSM_BLOG.user where username =#{username}
+    </select>
+
+
+</mapper>

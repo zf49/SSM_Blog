@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zf.dao.DetailMapper">
+
+   <insert id="addDetail" parameterType="detail">
+
+       insert into SSM_BLOG.user_detail (fname, lname, date_birth, descrip) values (#{fname},#{lname},#{dateBirth},#{descript})
+
+   </insert>
+
+    <select id="getLastestId" resultType="int">
+        select id from SSM_BLOG.user_detail order by id desc limit 1;
+    </select>
+
+
+
+
+
+</mapper>
