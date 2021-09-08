@@ -30,5 +30,17 @@ public class ArticleServiceImpl implements ArticleService {
         return articleMapper.getArticleByArticleId(id);
     }
 
+    public List<Article> getAllArticleContentName() {
+        return articleMapper.getAllArticleContentName();
+    }
+
+    public int deleteArticle(int id) {
+        return articleMapper.deleteArticle(id);
+    }
+
+    public int addArticle(Article article) {
+        return articleMapper.addArticle(article);
+    }
+
 
 }

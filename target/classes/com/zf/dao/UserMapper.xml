@@ -31,9 +31,13 @@
          select * from SSM_BLOG.user where id=#{id}
      </select>
 
-    <select id="getUserIdByname" parameterType="String">
-        select id from SSM_BLOG.user where username =#{username}
+    <select id="getUserByName" parameterType="string" resultType="user">
+        select * from SSM_BLOG.user where username = #{username}
     </select>
+
+
+
+
 
 
 </mapper>

@@ -15,7 +15,7 @@ public class Comment {
     private int id;
     private String content;
     private Date dateCreate;
-    private int authorId;
+    private String username;
     private int articleId;
 
 }

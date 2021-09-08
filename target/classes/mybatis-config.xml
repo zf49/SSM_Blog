@@ -18,6 +18,7 @@
         <mapper class="com.zf.dao.UserMapper"/>
         <mapper class="com.zf.dao.DetailMapper"/>
         <mapper class="com.zf.dao.ArticleMapper"/>
+        <mapper class="com.zf.dao.CommentsMapper"/>
     </mappers>
 
 </configuration>

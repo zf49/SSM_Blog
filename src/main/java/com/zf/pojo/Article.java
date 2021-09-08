@@ -16,6 +16,7 @@ public class Article {
     private String content;
     private Date dateCreate;
     private int authorId;
+    private String authorName;
 
 
 

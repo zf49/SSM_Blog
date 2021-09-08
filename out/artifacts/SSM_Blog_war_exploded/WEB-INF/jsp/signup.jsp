@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<h1>${msg}</h1>
 <form action="${pageContext.request.contextPath}/addUser" method="post">
 
     username: <input name="username" type="text" required>

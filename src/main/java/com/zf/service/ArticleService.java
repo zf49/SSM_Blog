@@ -11,6 +11,9 @@ public interface ArticleService {
     List<Article> getArticleByUserId(@Param("userId") int userId);
 
     Article getArticleByArticleId(@Param("id") int id);
+    List<Article> getAllArticleContentName();
+    int deleteArticle(@Param("articleId") int id);
+    int addArticle(Article article);
 
 
 }

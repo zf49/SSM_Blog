@@ -39,7 +39,9 @@ public class UserServiceImpl implements UserService{
         return userMapper.getUserById(id);
     }
 
-    public int getUserIdByname(String username) {
-        return userMapper.getUserIdByname(username);
+    public User getUserByName(String username) {
+        return userMapper.getUserByName(username);
     }
+
+
 }

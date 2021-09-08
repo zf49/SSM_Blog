@@ -11,8 +11,16 @@ public interface ArticleMapper {
 
        List<Article> getAllArticle();
 
+       List<Article> getAllArticleContentName();
+
        List<Article> getArticleByUserId(@Param("userId") int id);
 
        Article getArticleByArticleId(@Param("id") int id);
+
+       int deleteArticle(@Param("articleId") int id);
+
+       int addArticle(Article article);
+
+
 
 }

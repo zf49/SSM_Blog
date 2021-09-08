@@ -11,10 +11,12 @@ import com.zf.utils.GetJson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -46,13 +48,20 @@ public class UserController {
         }
 
 
+
+
+
+    //    TODO
+
+
       @RequestMapping("/addUser")
-     public String addUser(User user){
+     public String addUser(User user, Model model,HttpSession session){
 
           List<User> allUser = userService.getAllUser();
           for (User user1 : allUser) {
               if(user1.getUsername().equals(user.getUsername())){
-                  return "username has existed";
+                  model.addAttribute("msg","repetitive username");
+                  return "signup";
               }
           }
 
@@ -62,8 +71,20 @@ public class UserController {
 
           System.out.println(user);
           userService.addUser(user);
-          
-            return "redirect:/";
+
+          User userByName = userService.getUserByName(user.getUsername());
+
+          int id = userByName.getId();
+
+          model.addAttribute("userName","hello"+user.getUsername());
+          model.addAttribute("userId",id);
+          session.setAttribute("userId", id);
+          session.setAttribute("userName", user.getUsername());
+
+          System.out.println("aklsdjlkasjdklajsdlkajslkdasd"+session.getAttribute("userName"));
+
+
+          return "main";
 
      }
 

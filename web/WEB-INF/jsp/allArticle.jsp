@@ -14,6 +14,7 @@
 </head>
 <body>
 <div>
+
 <table >
     <thead>
     <tr>
@@ -21,6 +22,7 @@
         <th>Title</th>
         <th>Content</th>
         <th>Created Date</th>
+        <th>Author Name</th>
     </tr>
     </thead>
     <tbody>
@@ -28,14 +30,10 @@
         <tr>
             <td>${article.id}</td>
             <td>${article.title}</td>
-            <td>${article.content.substring(0,20)}</td>
+            <td>${article.content}</td>
             <td>${article.dateCreate}</td>
-<%--            <td>--%>
-<%--                <a href="${pageContext.request.contextPath}/book/toupdatebook/${book.bookID}">修改</a>--%>
-<%--                &nbsp;| &nbsp;--%>
+            <td>${article.authorName}</td>
 
-<%--                <a href="${pageContext.request.contextPath}/book/deletebook/${book.bookID}">删除</a>--%>
-<%--            </td>--%>
         </tr>
     </c:forEach>
     </tbody>

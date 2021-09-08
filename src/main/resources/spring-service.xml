@@ -30,6 +30,9 @@
     <bean id="ArticleServiceImpl" class="com.zf.service.ArticleServiceImpl">
         <property name="articleMapper" ref="articleMapper"/>
     </bean>
+    <bean id="CommentServiceImpl" class="com.zf.service.CommentServiceImpl">
+        <property name="commentsMapper" ref="commentsMapper"/>
+    </bean>
 
 
     <!--    事务-->

@@ -19,7 +19,7 @@ public interface UserMapper {
 
     User getUserById(@Param("id") int id);
 
-    int getUserIdByname(@Param("username") String username);
+    User getUserByName(@Param("username") String username);
 
 
 }
