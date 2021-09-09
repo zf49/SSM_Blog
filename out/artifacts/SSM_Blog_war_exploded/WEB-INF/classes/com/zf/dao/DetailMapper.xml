@@ -14,7 +14,19 @@
         select id from SSM_BLOG.user_detail order by id desc limit 1;
     </select>
 
+    <update id="updateDetailByuserId" parameterType="detail">
+        update SSM_BLOG.user_detail set fname =#{fname}, lname =#{lname},date_birth =#{dateBirth}, descrip = #{descrip} where id = #{id};
+    </update>
 
+
+    <resultMap id="Detail" type="detail">
+        <result column="date_birth" property="dateBirth"/>
+    </resultMap>
+
+
+    <select id="getDetailById" parameterType="int" resultMap="Detail">
+          select * from SSM_BLOG.user_detail where id = #{id}
+    </select>
 
 
 

@@ -25,5 +25,13 @@ public class DetailServiceImpl implements DetailService {
         return detailMapper.getLastestId();
     }
 
+    public int updateDetailByuserId(Detail detail) {
+        return detailMapper.updateDetailByuserId(detail);
+    }
+
+    public Detail getDetailById(int id) {
+        return detailMapper.getDetailById(id);
+    }
+
 
 }

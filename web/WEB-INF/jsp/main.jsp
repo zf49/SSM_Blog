@@ -18,6 +18,16 @@
 
 <h1><a href="${pageContext.request.contextPath}/${userId}/article">All my Article</a></h1>
 
+<h1><a href="${pageContext.request.contextPath}/toUpdateDetail">My profile</a> ${successOfProfile} </h1>
+
+
+<h1>
+    <a href="${pageContext.request.contextPath}/allArticle">All article</a>
+</h1>
+
+
+
+
 
 </body>
 </html>

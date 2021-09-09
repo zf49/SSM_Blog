@@ -76,12 +76,10 @@ public class UserController {
 
           int id = userByName.getId();
 
-          model.addAttribute("userName","hello"+user.getUsername());
+          model.addAttribute("userName","hello:   "+user.getUsername());
           model.addAttribute("userId",id);
           session.setAttribute("userId", id);
           session.setAttribute("userName", user.getUsername());
-
-          System.out.println("aklsdjlkasjdklajsdlkajslkdasd"+session.getAttribute("userName"));
 
 
           return "main";
@@ -102,6 +100,9 @@ public class UserController {
         return GetJson.getJson(userById);
 
     }
+
+
+
 
 
 

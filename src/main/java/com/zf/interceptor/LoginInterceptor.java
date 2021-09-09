@@ -37,6 +37,10 @@ public class LoginInterceptor implements HandlerInterceptor {
             return true;
         }
 
+         
+
+
+
 
         request.setAttribute("pleaseLogin","你还没有登陆请登录后在尝试");
         request.getRequestDispatcher("index.jsp").forward(request,response);
