@@ -17,4 +17,11 @@
                 where article_id=#{articleId}
          </select>
 
+
+    <insert id="addComment" parameterType="comment" >
+        insert into SSM_BLOG.comment (content, date_created, author_id, article_id)values (#{content},#{dateCreate},#{userId},#{articleId});
+
+    </insert>
+
+
 </mapper>

@@ -33,7 +33,7 @@
             <td>${article.content}</td>
             <td>${article.dateCreate}</td>
             <td>${article.authorName}</td>
-
+            <td><a href="${pageContext.request.contextPath}/${article.id}/getComment"> comment</a> </td>
         </tr>
     </c:forEach>
     </tbody>

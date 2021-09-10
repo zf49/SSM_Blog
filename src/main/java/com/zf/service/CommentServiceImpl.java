@@ -20,4 +20,8 @@ public class CommentServiceImpl implements CommentService{
     public List<Comment> getArticleComment(int articleId) {
         return commentsMapper.getArticleComment(articleId);
     }
+
+    public int addComment(Comment comment) {
+        return commentsMapper.addComment(comment);
+    }
 }

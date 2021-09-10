@@ -25,6 +25,7 @@
             <mvc:mapping path="/**"/>
             <bean class="com.zf.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
+      
     </mvc:interceptors>
 
 

@@ -9,11 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import javax.servlet.http.HttpSession;
 
 @Controller
-@SessionAttributes(value = {"userId", "userName"})
 public class LoginController {
 
     @Autowired
@@ -42,8 +42,9 @@ public class LoginController {
         if(user!=null && user.getPwd().equals(pwd)){
 
             httpSession.setAttribute("userId", user.getId());
-            model.addAttribute("userId",user.getId());
             httpSession.setAttribute("userName", username);
+
+            model.addAttribute("userId",user.getId());
             model.addAttribute("userName", username);
             return "main";
 
@@ -54,6 +55,13 @@ public class LoginController {
         }
 
     }
+
+       @RequestMapping("/logout")
+    public String logout(HttpSession session){
+           session.invalidate();
+          return "login";
+
+       }
 
 
 

@@ -8,5 +8,6 @@ import java.util.List;
 public interface CommentService {
 
     List<Comment> getArticleComment(@Param("articleId") int articleId);
+    int addComment(Comment comment);
 
 }

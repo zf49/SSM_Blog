@@ -29,16 +29,13 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         HttpSession session = request.getSession();
 
-        if(session.getAttribute("userID")!= null){
+        if(session.getAttribute("userId")!= null){
             return true;
 
         }
         if(session.getAttribute("userName")!= null){
             return true;
         }
-
-         
-
 
 
 

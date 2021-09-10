@@ -35,7 +35,9 @@
   <h1>
     <a href="${pageContext.request.contextPath}/tologin">登陆</a>
   </h1>
-
+     <h1>
+       <a href="${pageContext.request.contextPath}/logout">log out</a>
+     </h1>
 <h1>
   <a href="${pageContext.request.contextPath}/allArticle">All article</a>
 </h1>

@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<h1>${sessionScope.userId}</h1>
+<h1>${sessionScope.userName}</h1>
+
+
 <h1>${err}</h1>
 
 <form action="${pageContext.request.contextPath}/login" method="post">

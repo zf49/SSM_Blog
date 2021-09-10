@@ -32,6 +32,7 @@
         <th>user</th>
         <th>Date</th>
 
+
     </tr>
     </thead>
     <tbody>
@@ -44,6 +45,7 @@
     </c:forEach>
     </tbody>
 </table>
+<h1><a href="${pageContext.request.contextPath}/toAddComment">Add comment</a> </h1>
 
 
 
