@@ -27,6 +27,8 @@ the place need to be perfected
 1. user Avator(file upload and download)
 2. front-end UI
 3. nested comments
+4. Some codes do not comply with the rules of maintainability
+
 
 ------
 
