@@ -6,7 +6,7 @@
 
    <insert id="addDetail" parameterType="detail">
 
-       insert into SSM_BLOG.user_detail (fname, lname, date_birth, descrip) values (#{fname},#{lname},#{dateBirth},#{descript})
+       insert into SSM_BLOG.user_detail (fname, lname, date_birth, descrip) values (#{fname},#{lname},#{dateBirth},#{descrip})
 
    </insert>
 
